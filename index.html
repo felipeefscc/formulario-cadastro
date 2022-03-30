@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/svg" href="./img/logo.png"  width="100" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulario | Cadastro</title>
+</head>
+<body>  
+    <script src="./js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+
+    <div class="box">
+        <div class="logo">
+            <img src="./img/logo.png" width="200" alt="logo marktec">
+        </div>
+        <form autocomplete="off">
+            <fieldset>
+
+                <legend><b>CADASTRO</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser"required>
+                    <label for="nome" class="labelinput">Nome Completo:</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="cpf" id="cpf" maxlength="11" class="inputUser" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" required>
+                    <label for="cpf" class="labelinput">CPF:</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="rg" id="rg" class="inputUser" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" required>
+                    <label for="rg" class="labelinput">RG:</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="dtnasci" maxlength="8" id="dtnasci" class="inputUser" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" required>
+                    <label for="dtnasci" class="labelinput">Data de Nascimento:</label>
+                </div>
+                <br>
+                
+                <div class="inputBox">
+                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <label for="nome" class="labelinput">Email:</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="tel" name="phone" id="phone" class="inputUser" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" required>
+                    <label for="phone" class="labelinput">Telefone:</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="tel" name="phone1" id="phone1" class="inputUser" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" required>
+                    <label for="phone1" class="labelinput">Telefone 2:</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="endereco" id="endereco" class="inputUser" required>
+                    <label for="nome" class="labelinput">Endereço:</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="numero" id="numero" class="inputUser" required>
+                    <label for="numero" class="labelinput">Número:</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="bairro" id="bairro" class="inputUser" required>
+                    <label for="bairro" class="labelinput">Bairro:</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="cep" maxlength="8" id="cep" class="inputUser" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" required>
+                    <label for="cep" class="labelinput">CEP:</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="complemento" id="complemento" class="inputUser" required>
+                    <label for="complemento" class="labelinput">Complemento:</label>
+                </div>
+
+                    <br><br>
+
+                    <label for="planos"><b>Planos Fibra Optica:</b></label>
+                    <select id="planos" name="planos">
+                        <option value="20MB">20MB - R$49,90</option>
+                        <option value="35MB">35MB - R$59,90</option>
+                        <option value="50MB">50MB - R$69,90</option>
+                        <option value="100MB">100MB - R$79,90</option>
+                        <option value="300MB">300MB - R$99,90</option>
+                        <option value="500MB">500MB - R$129,90</option>
+                    </select>
+
+                    <br>
+                    <br>
+                    <br>
+
+                    <label for="vencimento""><b>Data de Vencimento:</b></label>
+                    <select id="vencimento" name="vencimento">
+                        <option value="05">Dia - 05</option>
+                        <option value="10">Dia - 10</option>
+                        <option value="15">Dia - 15</option>
+                        <option value="20">Dia - 20</option>
+                        <option value="25">Dia - 25</option>
+                        <option value="30">Dia - 30</option>
+                    </select>
+                    
+
+                    <br><br><br>
+                    
+                
+                <input type="submit" name="submit"  id="submit" value="Enviar" onclick="sendwpp()"/>
+            </fieldset>
+        </form>
+    </div>
+        
+</body>
+</html>
